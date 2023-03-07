@@ -1,0 +1,86 @@
+:host {
+  font-family: Arial;
+  color: white;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    height: 100vh;
+
+    .calculator {
+      width: 400px;
+      height: 550px;
+      padding: 25px;
+      background: rgb(53, 49, 49);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+      .display {
+        background: rgb(103, 103, 103);
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+
+      .button-group {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 50px;
+        gap: 20px;
+
+        .button {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: rgb(103, 103, 103);
+          border-radius: 10px;
+          transition: 0.2s ease-in-out;
+          cursor: pointer;
+        }
+
+        .button:hover {
+          transform: scale(1.1);
+        }
+
+        .special-button {
+          background: rgb(203, 119, 35);
+        }
+      }
+
+      .button-icons {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 10px;
+
+        .icon {
+          background: rgb(203, 119, 35);
+          border-radius: 10px;
+          padding: 10px;
+          filter: opacity(0.5);
+          transition: 0.2s ease-in-out;
+          cursor: pointer;
+
+          svg {
+            width: 20px;
+            fill: white;
+          }
+        }
+
+        .icon:hover {
+          filter: opacity(1);
+        }
+
+        .icon-selected {
+          filter: opacity(1);
+        }
+      }
+    }
+  }
+}
